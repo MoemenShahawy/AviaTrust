@@ -1,0 +1,95 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Insert Flight Record</li>
+  </ol>
+</nav>
+
+<style>
+  .spinner-border {
+      display: none;
+      margin-left: 10px;
+  }
+</style>
+
+<div class="my-4">
+  <div class="card">
+      <div class="card-header">
+          <h2 class="h5">Insert Flight Data</h2>
+      </div>
+      <div class="card-body">
+          <form id="insertForm">
+              <div class="mb-3">
+                  <label for="flightId" class="form-label">Flight ID</label>
+                  <input type="number" class="form-control" id="flightId" placeholder="Enter Flight ID">
+              </div>
+
+              <div class="mb-3">
+                  <label for="pilotId" class="form-label">Pilot ID</label>
+                  <input type="text" class="form-control" id="pilotId" placeholder="Enter Pilot ID">
+              </div>
+              <div class="mb-3">
+                  <label for="passengerCount" class="form-label">Passenger Count</label>
+                  <input type="number" class="form-control" id="passengerCount" placeholder="Enter Passenger Count">
+              </div>
+              <div class="mb-3">
+                  <label for="grossWeight" class="form-label">Gross Weight (kg)</label>
+                  <input type="number" class="form-control" id="grossWeight" placeholder="Enter Gross Weight">
+              </div>
+              <div class="mb-3">
+                  <label for="altitude" class="form-label">Altitude (ft)</label>
+                  <input type="number" class="form-control" id="altitude" placeholder="Enter Altitude">
+              </div>
+              <div class="mb-3">
+                  <label for="airSpeed" class="form-label">Air Speed (knots)</label>
+                  <input type="number" class="form-control" id="airSpeed" placeholder="Enter Air Speed">
+              </div>
+              <div class="mb-3">
+                  <label for="aileronPosition" class="form-label">Aileron Position (degrees)</label>
+                  <input type="number" class="form-control" id="aileronPosition" placeholder="Enter Aileron Position">
+              </div>
+              <div class="mb-3">
+                  <label for="spoilerPosition" class="form-label">Spoiler Position (degrees)</label>
+                  <input type="number" class="form-control" id="spoilerPosition" placeholder="Enter Spoiler Position">
+              </div>
+              <div class="mb-3">
+                  <label for="elevatorPosition" class="form-label">Elevator Position (degrees)</label>
+                  <input type="number" class="form-control" id="elevatorPosition" placeholder="Enter Elevator Position">
+              </div>
+              <div class="mb-3">
+                  <label for="rudderPosition" class="form-label">Rudder Position (degrees)</label>
+                  <input type="number" class="form-control" id="rudderPosition" placeholder="Enter Rudder Position">
+              </div>
+              <div class="mb-3">
+                  <label for="engineEGT" class="form-label">Engine EGT (°C)</label>
+                  <input type="number" class="form-control" id="engineEGT" placeholder="Enter Engine EGT">
+              </div>
+              <div class="mb-3">
+                  <label for="engineCompressorSpeed" class="form-label">Engine Compressor Speed (RPM)</label>
+                  <input type="number" class="form-control" id="engineCompressorSpeed" placeholder="Enter Engine Compressor Speed">
+              </div>
+              <div class="mb-3">
+                  <label for="engineTurbineSpeed" class="form-label">Engine Turbine Speed (RPM)</label>
+                  <input type="number" class="form-control" id="engineTurbineSpeed" placeholder="Enter Engine Turbine Speed">
+              </div>
+              <div class="mb-3">
+                  <label for="fuelFlow" class="form-label">Fuel Flow (L/h)</label>
+                  <input type="number" class="form-control" id="fuelFlow" placeholder="Enter Fuel Flow">
+              </div>
+
+              <div class="mb-3">
+                  <label for="recordTime" class="form-label">Record Time (Unix Timestamp)</label>
+                  <input type="number" class="form-control" id="recordTime" placeholder="Enter Record Time">
+              </div>
+
+              <button type="button" id="insertButton" class="btn btn-primary">Insert Record</button>
+              <div class="spinner-border text-primary" id="loadingSpinner" role="status">
+                  <span class="sr-only">Loading...</span>
+              </div>
+          </form>
+          <div id="statusMessage" class="alert mt-3" role="alert" style="display: none;"></div>
+      </div>
+  </div>
+</div>
+
+<script src="/js/insert.js"></script>

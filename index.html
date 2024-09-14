@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AviaTrust - Flight Data Preservation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <style>
+      body {
+        position: absolute;
+        top:0;
+        bottom: 0;
+        width: 100%;
+      }
+
+        .sidebar {
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+
+        .navbar {
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+        }
+
+        .sidebar .nav-link {
+            color: #404040;
+        }
+
+        .sidebar .nav-link.active i {
+            color: #0cb043;
+        }
+
+        .sidebar .nav-link.active > span {
+          color: #000;
+        }
+
+        .sidebar .nav-link.disabled {
+            color: #6c757d;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light p-3">
+        <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+            <a class="navbar-brand" href="/">
+                AviaTrust - Flight Data Preservation
+            </a>
+            <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+            <div class="mr-3 mt-1">
+                <p>Supervised by <strong><a href="https://www.linkedin.com/in/muhsin-hassanu-saleh-phd-b1a385162/" target="_blank" class="link-underline link-underline-opacity-10">Dr. Muhsin Hassanu</a></strong></p>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- BODY -->
+    <div class="container-fluid" style="height: calc(100% - 44px - 2rem);">
+        <div class="row" style="height: 100%;">
+
+
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
+            </nav>
+
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4 d-flex flex-column">
+              <div id="mainContainer" style="flex-grow: 1;">
+
+              </div>
+
+
+              <footer class="pt-5 d-flex justify-content-between">
+                  <span style="font-size: 0.75em;">Copyright © 2024 - <strong>Moemen Shahawy</strong></span>
+                  <ul class="nav m-0">
+                      <li class="nav-item">
+                        <small style="font-size: 0.6em;"><i>In partial fulfilment of the MSc. in Business Computing, <strong style="color: red;">Staffordshire University</strong></i></small>
+                      </li>
+                    </ul>
+              </footer>
+            </main>
+          
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.6.1/dist/web3.min.js"></script>
+    
+
+    <script src="js/index.js" defer></script>
+    
+</body>
+</html>

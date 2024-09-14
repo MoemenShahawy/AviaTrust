@@ -1,0 +1,87 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Inspect Flight Records</li>
+  </ol>
+</nav>
+
+<style>
+  #flightDataList {
+      padding: 10px;
+      white-space: nowrap;
+  }
+
+  .flight-data-card {
+      flex: 0 0 auto;
+      margin-right: 20px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+  }
+
+  .flight-data-card:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+  }
+
+  .tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s;
+  }
+
+  .tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+  }
+
+  .spinner-border {
+      display: none;
+      margin-left: 10px;
+  }
+</style>
+
+<div class="my-4">
+  <div class="card">
+      <div class="card-header">
+          <h2 class="h5">Inspect Flight Data</h2>
+      </div>
+      <div class="card-body">
+          <form id="inspectForm">
+              <div class="input-group mb-3">
+                  <input type="number" id="flightIdInput" class="form-control" placeholder="Enter Flight ID" aria-label="Flight ID">
+                  <button id="getDataButton" class="btn btn-success">Get Flight Data</button>
+                  <div class="spinner-border text-primary" id="loadingSpinner" role="status">
+                      <span class="sr-only">Loading...</span>
+                  </div>
+              </div>
+          </form>
+          <div id="flightDataContainer" style="display: none;">
+              <h5 class="mt-4">Flight Data:</h5>
+              <div id="flightDataList" class="d-flex flex-nowrap overflow-auto pt-5">
+              </div>
+          </div>
+          <div id="errorMessage" class="alert alert-danger mt-4" style="display: none;"></div>
+      </div>
+  </div>
+</div>
+
+<script src="/js/inspect.js"></script>
